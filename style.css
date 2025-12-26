@@ -24,6 +24,22 @@ body {
   margin: auto;
 }
 
+.section-contato {
+  padding: 40px 20px;
+  background-color: #00c4cc;
+}
+
+.section-contato * {
+  margin-bottom: 12px;
+}
+
+.section-instagram {
+  background-color: #f5f7f9;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+
 /* HEADER */
 .header {
   background: var(--secondary);
@@ -108,12 +124,12 @@ section {
   text-decoration: none;
 }
 
-/* FOOTER */
-.footer {
-  background: var(--secondary);
-  color: #fff;
-  padding: 20px 0;
+footer {
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 20px;
   text-align: center;
+  font-size: 14px;
 }
 
 .footer-links a {
@@ -143,6 +159,7 @@ section {
 .header img.logo {
   display: block;
 }
+
 
 
 
