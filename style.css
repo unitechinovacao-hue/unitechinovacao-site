@@ -134,3 +134,14 @@ section {
   text-decoration: none;
   font-weight: bold;
 }
+
+.logo {
+  max-height: 50px;
+  width: auto;
+}
+
+.header img.logo {
+  display: block;
+}
+
+
