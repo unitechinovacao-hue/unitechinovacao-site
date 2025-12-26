@@ -1,165 +1,143 @@
 :root {
-  --primary: #1ecad3;
-  --secondary: #0f2a3d;
-  --dark: #0b1f2a;
-  --light: #f5f7fa;
+  --azul: #0f172a;
+  --verde: #00b4b8;
+  --verde-claro: #00d4aa;
+  --cinza: #f5f7f9;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body {
-  background: var(--light);
-  color: var(--dark);
-}
-
-/* CONTAINER */
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.section-contato {
-  padding: 40px 20px;
-  background-color: #00c4cc;
-}
-
-.section-contato * {
-  margin-bottom: 12px;
-}
-
-.section-instagram {
-  background-color: #f5f7f9;
-  padding: 30px 20px;
-  text-align: center;
-}
-
-
-/* HEADER */
-.header {
-  background: var(--secondary);
-  padding: 15px 0;
-}
-
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header nav a {
-  color: #fff;
-  margin-left: 20px;
-  text-decoration: none;
-}
-
-.btn-outline {
-  border: 1px solid var(--primary);
-  padding: 8px 14px;
-  border-radius: 5px;
+  background: var(--cinza);
+  color: var(--azul);
 }
 
 /* HERO */
 .hero {
-  background: linear-gradient(135deg, var(--secondary), var(--dark));
-  color: #fff;
-  padding: 80px 0;
+  background: linear-gradient(135deg, var(--azul), #08101f);
+  color: white;
   text-align: center;
+  padding: 70px 20px;
+}
+
+.logo {
+  max-width: 150px;
+  margin-bottom: 20px;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
-.hero p {
-  margin-bottom: 30px;
+.sub {
+  font-size: 16px;
+  opacity: 0.9;
 }
 
-.buttons a {
-  margin: 10px;
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 /* BOTÕES */
-.btn-primary {
-  background: var(--primary);
-  color: #000;
-  padding: 12px 22px;
-  border-radius: 6px;
+.btn {
+  padding: 14px 30px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.3s;
 }
 
-.btn-secondary {
-  border: 1px solid #fff;
-  padding: 12px 22px;
-  border-radius: 6px;
-  color: #fff;
-  text-decoration: none;
+.primary {
+  background: var(--verde);
+  color: #003c3c;
 }
 
-/* SEÇÕES */
-section {
-  padding: 60px 0;
+.secondary {
+  background: transparent;
+  border: 2px solid var(--verde);
+  color: var(--verde);
 }
 
-.services ul li {
-  margin: 10px 0;
+.dark {
+  background: var(--azul);
+  color: white;
 }
 
-.features .grid {
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* BENEFÍCIOS */
+.beneficios {
+  padding: 60px 20px;
+  background: white;
+}
+
+.beneficios h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
-/* CONTATO */
-.contact a {
-  color: var(--primary);
-  text-decoration: none;
+.grid div {
+  background: var(--cinza);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
 }
 
-footer {
-  background-color: #0f172a;
-  color: #ffffff;
-  padding: 20px;
+/* LOCAL */
+.local {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* CONTATO */
+.contato {
+  background: linear-gradient(135deg, var(--verde), var(--verde-claro));
+  padding: 60px 20px;
   text-align: center;
+  color: #003c3c;
+}
+
+/* INSTAGRAM */
+.instagram {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  background: var(--azul);
+  color: white;
+  text-align: center;
+  padding: 20px;
   font-size: 14px;
 }
 
-.footer-links a {
-  color: var(--primary);
-  margin: 0 10px;
-  text-decoration: none;
+/* MOBILE PREMIUM */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .logo {
+    max-width: 120px;
+  }
 }
-
-/* WHATSAPP FLUTUANTE */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: #fff;
-  padding: 14px 18px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.logo {
-  max-height: 48px;
-  width: auto;
-}
-
-.header img.logo {
-  display: block;
-}
-
-
-
-
