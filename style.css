@@ -136,12 +136,13 @@ section {
 }
 
 .logo {
-  max-height: 50px;
+  max-height: 48px;
   width: auto;
 }
 
 .header img.logo {
   display: block;
 }
+
 
 
