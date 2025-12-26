@@ -2,87 +2,233 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Unitech Inovação | Assistência Técnica em Informática em Teresina</title>
 
-  <!-- SEO LOCAL -->
-  <meta name="description" content="Unitech Inovação oferece assistência técnica em informática, manutenção de notebooks, suporte técnico e soluções em tecnologia em Teresina - PI.">
-  <meta name="keywords" content="assistência técnica Teresina, manutenção de notebook Teresina, suporte técnico PI, informática Teresina">
-  <meta name="author" content="Unitech Inovação">
+  <!-- SEO -->
+  <meta name="description" content="Assistência técnica especializada em notebooks, computadores e impressoras.">
+  <meta name="keywords" content="assistência técnica Teresina, notebook Teresina, informática PI">
 
-  <!-- REDES -->
-  <meta property="og:title" content="Unitech Inovação">
-  <meta property="og:description" content="Soluções em tecnologia para seu dia a dia em Teresina - PI">
-  <meta property="og:type" content="website">
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --azul: #0b2c45;
+      --verde: #00c2a8;
+      --cinza: #f4f6f8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      color: #222;
+      background: #145a5123;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header img {
+      height: 55px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: var(--azul);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 90px 8%;
+      background: linear-gradient(135deg, var(--azul), #081f30);
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    .hero .buttons a {
+      display: inline-block;
+      margin: 20px 10px 0;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .btn-wpp {
+      background: var(--verde);
+      color: #000;
+    }
+
+    .btn-client {
+      background: #fff;
+      color: var(--azul);
+    }
+
+    /* ANIMAÇÃO */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* SERVIÇOS */
+    .servicos {
+      padding: 70px 8%;
+      background: var(--cinza);
+      text-align: center;
+    }
+
+    .cards {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .card i {
+      font-size: 28px;
+      color: var(--verde);
+      margin-bottom: 10px;
+    }
+
+    /* MAPA */
+    .mapa {
+      padding: 60px 8%;
+      text-align: center;
+    }
+
+    iframe {
+      width: 100%;
+      height: 350px;
+      border-radius: 10px;
+      border: none;
+      margin-top: 20px;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 30px 8%;
+      text-align: center;
+      background: #f1f1f1;
+    }
+
+    .whatsapp-fixo {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: #fff;
+      padding: 14px 18px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 30px; }
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header class="hero">
-    <img src="logo.png" alt="Unitech Inovação" class="logo">
+<header>
+  <img src="logo.png" alt="Unitech Inovação">
+  <nav>
+    <a href="#servicos">Serviços</a>
+    <a href="#localizacao">Localização</a>
+    <a href="https://sistema.unitechinovacao.com" target="_blank">Área do Cliente</a>
+  </nav>
+</header>
 
-    <h1>Soluções em tecnologia para seu dia a dia</h1>
-    <p class="sub">
-      Assistência técnica, manutenção e suporte em informática em Teresina / PI
-    </p>
+<section class="hero reveal">
+  <h1>Soluções em tecnologia para seu dia a dia</h1>
+  <p>Assistência técnica especializada em notebooks, computadores e suporte em TI em Teresina – PI.</p>
+  <div class="buttons">
+    <a class="btn-wpp" href="https://wa.me/5586981662423" target="_blank">WhatsApp</a>
+    <a class="btn-client" href="https://sistema.unitechinovacao.com" target="_blank">Área do Cliente</a>
+  </div>
+</section>
 
-    <div class="hero-buttons">
-      <a href="https://wa.me/5586981662423" target="_blank" class="btn primary">
-        WhatsApp
-      </a>
+<section class="servicos reveal" id="servicos">
+  <h2>Nossos Serviços</h2>
+  <div class="cards">
+    <div class="card"><i class="fas fa-laptop"></i><h3>Manutenção</h3></div>
+    <div class="card"><i class="fas fa-bolt"></i><h3>Formatação</h3></div>
+    <div class="card"><i class="fas fa-memory"></i><h3>Upgrade</h3></div>
+    <div class="card"><i class="fas fa-headset"></i><h3>Suporte</h3></div>
+  </div>
+</section>
 
-      <a href="https://sistema.unitechinovacao.com" target="_blank" class="btn secondary">
-        Área do Cliente
-      </a>
-    </div>
-  </header>
+<section class="mapa reveal" id="localizacao">
+  <h2>Onde estamos</h2>
+  <p>Rua Professor Ludovico Schgwennhagen, Parque Alvorada, Teresina - PI</p>
 
-  <!-- DIFERENCIAIS -->
-  <section class="beneficios">
-    <h2>Por que escolher a Unitech Inovação?</h2>
+  <iframe 
+    src="https://www.google.com/maps?q=Rua+Professor+Ludovico+Schgwennhagen,+Parque+Alvorada,+Teresina+-+PI&output=embed">
+  </iframe>
+</section>
 
-    <div class="grid">
-      <div>Atendimento transparente</div>
-      <div>Equipamentos testados e com garantia</div>
-      <div>Suporte especializado</div>
-      <div>Soluções sob medida</div>
-    </div>
-  </section>
-
-  <!-- LOCAL -->
-  <section class="local">
-    <h2>Atendimento local e de confiança</h2>
-    <p>
-      A <strong>Unitech Inovação</strong> atua em Teresina / PI oferecendo
-      assistência técnica em informática, manutenção de notebooks,
-      formatação, upgrades e suporte técnico especializado.
-    </p>
-  </section>
-
-  <!-- CONTATO -->
-  <section class="contato">
-    <h2>Fale com a Unitech Inovação</h2>
-    <p>📍 Teresina / PI</p>
-    <p>📞 WhatsApp: <strong>(86) 98166-2423</strong></p>
-
-    <a href="https://wa.me/5586981662423" target="_blank" class="btn dark">
-      Atendimento imediato via WhatsApp
+<footer>
+  <p>📍 Teresina - PI | 📞 (86) 98166-2423</p>
+  <p>
+    <a href="https://instagram.com/unitechinovacao" target="_blank">
+      <i class="fab fa-instagram"></i> @unitechinovacao
     </a>
-  </section>
+  </p>
+</footer>
 
-  <!-- INSTAGRAM -->
-  <section class="instagram">
-    <p>Siga nosso Instagram</p>
-    <strong>@unitechinovacao</strong>
-  </section>
+<a class="whatsapp-fixo" href="https://wa.me/5586981662423" target="_blank">WhatsApp</a>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Unitech Inovação — Teresina / PI</p>
-  </footer>
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+  window.addEventListener("scroll", () => {
+    reveals.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        el.classList.add("active");
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
