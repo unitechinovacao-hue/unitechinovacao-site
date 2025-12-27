@@ -92,14 +92,14 @@
 
     /* ANIMAÇÃO */
     .reveal {
-      opacity: 0;
-      transform: translateY(40px);
+      opacity: 01;
+      transform: translateY(0);
       transition: all 0.6s ease;
     }
 
     .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
+      opacity: 0;
+      transform: translateY(40px);
     }
 
     /* SERVIÇOS */
@@ -188,7 +188,7 @@
   </div>
 </section>
 
-<section class="servicos reveal" id="servicos">
+<section class="servicos reveal hidden" id="servicos">
   <h2>Nossos Serviços</h2>
   <div class="cards">
     <div class="card"><i class="fas fa-laptop"></i><h3>Manutenção</h3></div>
@@ -198,9 +198,9 @@
   </div>
 </section>
 
-<section class="mapa reveal" id="localizacao">
+<section class="mapa reveal hidden" id="localizacao">
   <h2>Onde estamos</h2>
-  <p>Rua Professor Ludovico Schgwennhagen, Parque Alvorada, Teresina - PI</p>
+  <p>Rua Professor Ludovico Schgwennhagen,2042 Parque Alvorada, Teresina - PI</p>
 
   <iframe 
     src="https://www.google.com/maps?q=Rua+Professor+Ludovico+Schgwennhagen,+Parque+Alvorada,+Teresina+-+PI&output=embed">
@@ -219,15 +219,21 @@
 <a class="whatsapp-fixo" href="https://wa.me/5586981662423" target="_blank">WhatsApp</a>
 
 <script>
-  const reveals = document.querySelectorAll(".reveal");
-  window.addEventListener("scroll", () => {
+  const reveals = document.querySelectorAll(".reveal hidden");
+ // window.addEventListener("scroll", () => {
+
+ function revealOnScroll() {
     reveals.forEach(el => {
       const top = el.getBoundingClientRect().top;
       if (top < window.innerHeight - 100) {
-        el.classList.add("active");
+       // el.classList.add("active");
+       el.classList.remove("hidden");
       }
     });
-  });
+  };
+
+  window.addEventListener("scroll", revealOnScroll);
+  window.addEventListener("load", revealOnScroll);
 </script>
 
 </body>
